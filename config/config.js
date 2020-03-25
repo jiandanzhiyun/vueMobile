@@ -9,7 +9,7 @@ module.exports = {
         https: false,
         proxy: {
             '/api':{
-                target:'',//域名地址
+                target:'http://hyt.cdheshiyu.com',//域名地址
                 changeOrigin:true,
                 pathRewrite:{
                     '/api':''
