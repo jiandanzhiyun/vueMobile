@@ -17,8 +17,9 @@ npm run build
 ##服务请求说明
 为了方便合作开发,服务请求统一管理 所有服务请求都在api/index.js下进行 可根据需要新建
 
-##日期格式的封装
+## 日期格式的封装
 utils/date.js
-引用方式
+## 引用方式
 import { formatDate } from "utils/date.js";
+
 formatDate(e, "yyyy-MM-dd");
