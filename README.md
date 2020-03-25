@@ -25,3 +25,4 @@ import { formatDate } from "utils/date.js";
 formatDate(e, "yyyy-MM-dd");
 ## 不定期更新 为了自己开发方便而已 ^_^
 ## 求 star ^_^^_^^_^^_^^_^
+## base.css 写了一部分常用的基础样式

@@ -193,7 +193,7 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    width: 0rpx;
+    width: 0;
 }
 
 html {
@@ -247,42 +247,6 @@ table {
     border-spacing: 0;
 }
 
-b {
-    font-weight: bold;
-}
-
-.empty-top {
-    margin-top: 4rem;
-}
-
-.empty-img {
-    width: 100%;
-    text-align: center;
-    color: #617fa0;
-    padding: 0;
-    margin: 0;
-}
-
-.empty-img>img {
-    width: 98px;
-    height: 64px;
-}
-
-.empty-top p {
-    width: 100%;
-}
-
-.over-hide {
-    overflow: hidden;
-}
-
-.float-left {
-    float: left !important;
-}
-
-.float-right {
-    float: right !important;
-}
 
 .text-left {
     text-align: left;
@@ -349,69 +313,4 @@ b {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
     overflow: hidden;
-}
-
-.theme-color {
-    color: #ED616C;
-}
-
-.font15 {
-    font-size: .75rem;
-}
-
-.van-ellipsis {
-    font-size: 0.7rem;
-}
-
-/* .common-lesson-box {} */
-
-.common-lesson-item {
-    margin-bottom: 0.5rem;
-    padding: 0 0.8rem;
-    background-color: #fff;
-}
-
-.common-lesson-item-title {
-    position: relative;
-    padding: 0.8rem 0;
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: #444649;
-}
-
-.common-lesson-item-line {
-    display: flex;
-    align-items: center;
-    padding-bottom: 0.6rem;
-    font-size: 0.6rem;
-}
-
-.common-lesson-item-icon {
-    margin-right: 0.4rem;
-    width: 9px;
-    display: block;
-}
-
-.common-lesson-item-color-l {
-    color: #828282;
-}
-
-.common-lesson-item-color-r {
-    word-break: break-all;
-    color: #444649;
-}
-
-.common-lesson-btns {
-    padding: 0.8rem 0;
-    text-align: center;
-    border-top: 1px solid #e8e8e8;
-}
-
-.common-lesson-btn {
-    width: 10rem;
-    background-color: #ed616c;
-    border-color: #ed616c;
-    height: 1.5rem;
-    line-height: 1.5rem;
-    border-radius: .25rem;
 }
