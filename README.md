@@ -1,5 +1,5 @@
 # vueMobile
-移动端前端框架
+移动端前端框架 /可用于pc端+element ui (public/index.html)下删除移动适配js即可
 
 基于 Vue + Ant+axios 移动前端框架。
 
