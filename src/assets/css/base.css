@@ -1,0 +1,417 @@
+/*flex布局  */
+.flex-container {
+    display: -webkit-box;
+    display: flex;
+}
+
+.flex-dir-rr {
+    /*主轴为横轴 顺序与文档流相反*/
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.flex-dir-c {
+    /*主轴为纵轴 顺序与文档流相同*/
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+}
+
+.flex-dir-cr {
+    /*主轴为纵轴 顺序与文档流相反*/
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+
+.flex-wrap-w {
+    /*允许子项目折行显示 顺序与文档流相同*/
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.flex-wrap-wr {
+    /*允许子项目折行显示 顺序与文档流相反*/
+    -ms-flex-wrap: wrap-reverse;
+    -webkit-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+}
+
+.flex-jus-e {
+    /*子项目在主轴方向上 尾部对齐*/
+    -moz-box-pack: end;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+.flex-jus-c {
+    /*子项目在主轴方向上 居中对齐*/
+    -moz-box-pack: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.flex-jus-st {
+    -moz-box-pack: start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: start;
+    justify-content: start;
+}
+
+.flex-jus-sa {
+    /*子项目在主轴方向上 均匀分布 首尾子项到父容器的距离是子项间距的一半*/
+    -moz-box-pack: space-around;
+    -webkit-box-pack: space-around;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+
+.flex-jus-sp {
+    /*子项目在主轴方向上 均匀分布 首尾子项到父容器的距离为0*/
+    -moz-box-pack: space-between;
+    -webkit-box-pack: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.flex-align-s {
+    /*子项目在侧轴上 头部对齐（宽高不被拉伸）*/
+    -moz-box-align: start;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+}
+
+.flex-align-e {
+    /*子项目在侧轴上 尾部对齐（宽高不被拉伸）*/
+    -moz-box-align: end;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+
+.flex-align-c {
+    /*子项目在侧轴上 居中对齐（宽高不被拉伸）*/
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.flex-align-b {
+    /*子项目在侧轴上 首行文字的基线对齐（宽高不被拉伸）*/
+    -moz-box-align: baseline;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+    align-items: baseline;
+}
+
+.flex-one {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.flex-two {
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    -moz-box-flex: 2;
+    -webkit-box-flex: 2;
+    flex: 2;
+}
+
+.flex-three {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    -moz-box-flex: 3;
+    -webkit-box-flex: 3;
+    flex: 3;
+}
+
+.flex-four {
+    -webkit-flex: 4;
+    -ms-flex: 4;
+    -moz-box-flex: 4;
+    -webkit-box-flex: 4;
+    flex: 4;
+}
+
+.flex-five {
+    -webkit-flex: 5;
+    -ms-flex: 5;
+    -moz-box-flex: 5;
+    -webkit-box-flex: 5;
+    flex: 5;
+}
+
+.flex-six {
+    -webkit-flex: 6;
+    -ms-flex: 6;
+    -moz-box-flex: 6;
+    -webkit-box-flex: 6;
+    flex: 6;
+}
+
+.flex-seven {
+    -webkit-flex: 7;
+    -ms-flex: 7;
+    -moz-box-flex: 7;
+    -webkit-box-flex: 7;
+    flex: 7;
+}
+
+.flex-eight {
+    -webkit-flex: 8;
+    -ms-flex: 8;
+    -moz-box-flex: 8;
+    -webkit-box-flex: 8;
+    flex: 8;
+}
+
+.flex-nine {
+    -webkit-flex: 9;
+    -ms-flex: 9;
+    -moz-box-flex: 9;
+    -webkit-box-flex: 9;
+    flex: 9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* 限制显示一行 */
+.text-over-1 {
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0rpx;
+}
+
+html {
+    font-family: "microsoft yahei", 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    background: #f6f7fb;
+}
+
+html,
+body,
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+a cite {
+    font-style: normal;
+    *cursor: pointer;
+}
+
+ul,li {
+    list-style: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+b {
+    font-weight: bold;
+}
+
+.empty-top {
+    margin-top: 4rem;
+}
+
+.empty-img {
+    width: 100%;
+    text-align: center;
+    color: #617fa0;
+    padding: 0;
+    margin: 0;
+}
+
+.empty-img>img {
+    width: 98px;
+    height: 64px;
+}
+
+.empty-top p {
+    width: 100%;
+}
+
+.over-hide {
+    overflow: hidden;
+}
+
+.float-left {
+    float: left !important;
+}
+
+.float-right {
+    float: right !important;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.dis-table {
+    display: table;
+    width: 100%;
+    line-height: inherit;
+    vertical-align: middle;
+}
+
+.dis-table .dis-row {
+    display: table-row;
+}
+
+.dis-table .dis-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.dis-block {
+    display: block;
+}
+
+.dis-inblock {
+    display: inline-block;
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.ellipsis-line-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.ellipsis-line-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.ellipsis-line-5 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+}
+
+.theme-color {
+    color: #ED616C;
+}
+
+.font15 {
+    font-size: .75rem;
+}
+
+.van-ellipsis {
+    font-size: 0.7rem;
+}
+
+/* .common-lesson-box {} */
+
+.common-lesson-item {
+    margin-bottom: 0.5rem;
+    padding: 0 0.8rem;
+    background-color: #fff;
+}
+
+.common-lesson-item-title {
+    position: relative;
+    padding: 0.8rem 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #444649;
+}
+
+.common-lesson-item-line {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.6rem;
+    font-size: 0.6rem;
+}
+
+.common-lesson-item-icon {
+    margin-right: 0.4rem;
+    width: 9px;
+    display: block;
+}
+
+.common-lesson-item-color-l {
+    color: #828282;
+}
+
+.common-lesson-item-color-r {
+    word-break: break-all;
+    color: #444649;
+}
+
+.common-lesson-btns {
+    padding: 0.8rem 0;
+    text-align: center;
+    border-top: 1px solid #e8e8e8;
+}
+
+.common-lesson-btn {
+    width: 10rem;
+    background-color: #ed616c;
+    border-color: #ed616c;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    border-radius: .25rem;
+}
