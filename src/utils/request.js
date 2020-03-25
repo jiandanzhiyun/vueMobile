@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-const service = axios.create({
+const ajax = axios.create({
     // process.env.NODE_ENV === 'development', //来判断是否开发环境
-     headers:{'Content-Type':'application/json;charset=utf-8', "XX-Token": localStorage.getItem('token'),'XX-Device-Type':'wxapp' },
-     baseURL: 'http://hyt.cdheshiyu.com',
+     headers:{},
+     baseURL: '',
     timeout: 5000
 });
 
-service.interceptors.request.use(
+ajax.interceptors.request.use(
     config => {
         return config;
     },
@@ -17,7 +17,7 @@ service.interceptors.request.use(
     }
 );
 
-service.interceptors.response.use(
+ajax.interceptors.response.use(
     response => {
         if (response.status === 200) {
             return response.data;
@@ -31,4 +31,4 @@ service.interceptors.response.use(
     }
 );
 
-export default service;
+export default ajax;
