@@ -9,8 +9,8 @@
 
 npm install         // 安装项目依赖，等待安装完成之后，安装失败可用 cnpm 或 yarn
 
-// 开启服务器，浏览器访问 http://localhost:3201
-npm run serve
+// 开启服务器npm run serve，浏览器访问 http://localhost:3201
+
 
 // 执行构建命令，生成的dist文件夹放在服务器下即可访问
 npm run build
@@ -25,4 +25,5 @@ import { formatDate } from "utils/date.js";
 formatDate(e, "yyyy-MM-dd");
 ## 不定期更新 为了自己开发方便而已 ^_^
 ## 求 star ^_^^_^^_^^_^^_^
-## base.css 写了一部分常用的基础样式
+## base.css 
+ //写了一部分常用的基础样式
