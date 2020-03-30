@@ -1,20 +1,13 @@
 <template>
     <div class="mainNav">
-        <div class="home-box">
-            <home v-if="active == 0"></home>
-            <two v-if="active == 1"></two>
-            <three v-if="active == 2"></three>
-            <four v-if="active == 3"></four>
-        </div>
-
-        <van-tabbar v-model="active" active-color="#ed616c" inactive-color="#C1C1C1">
-            <van-tabbar-item>
+        <van-tabbar v-model="active" @click.native="tab()" active-color="#04befe" inactive-color="#C1C1C1">
+            <van-tabbar-item icon="wap-home-o">
                 首页
             </van-tabbar-item>
-            <van-tabbar-item>
+            <van-tabbar-item icon="shop-o">
                 第二页
             </van-tabbar-item>
-            <van-tabbar-item icon="notes-o">
+            <van-tabbar-item icon="apps-o">
                 第三页
             </van-tabbar-item>
             <van-tabbar-item icon='contact'>
@@ -24,10 +17,6 @@
     </div>
 </template>
 <script>
-import home from '../view/home/index';
-import two from '../view/two/index';
-import three from '../view/three/index';
-import four from '../view/four/index';
 export default {
     name: 'mainNav',
     data() {
@@ -35,18 +24,33 @@ export default {
             active: 0,
         };
     },
-    components: {
-        home,
-        two,
-        three,
-        four
+    mounted() {
+
     },
-    mounted() {},
     watch: {},
     methods: {
-        tab(value) {
-            // this.selected =this.$parent.selected
-            this.active = value;
+        init(number){
+            this.active=number
+            switch (number) {
+                case 0:
+                    this.$router.push('/home')
+                break;
+                case 1:
+                    this.$router.push('/two')
+                break;
+                case 2:
+                    this.$router.push('/three')
+                break;
+                case 3:
+                    this.$router.push('/four')
+                break;
+                default:
+                    break;
+            }
+        },
+        tab() {
+
+            this.$emit("tab",this.active)
         }
     }
 };

@@ -6,9 +6,9 @@ import router from './router';
 import axios from 'axios';
 
 // UI
-
+import Vant from 'vant';
 import 'vant/lib/index.css';
-
+Vue.use(Vant);
 
 // common css
 import './assets/css/base.css';
@@ -20,12 +20,13 @@ router.beforeEach((to, from, next) => {
     if (to.meta.title) {
         document.title = to.meta.title
     }
-    const role = localStorage.getItem('token');
-    if (!role && to.path !== '/login') {
-        next('/login');
-    } else {
-        next();
-    }
+    next();
+    // const role = localStorage.getItem('token');
+    // if (!role && to.path !== '/login') {
+    //     next('/login');
+    // } else {
+    //     next();
+    // }
 
 
 })

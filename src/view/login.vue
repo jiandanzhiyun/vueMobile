@@ -12,9 +12,7 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import {Toast,Notify} from 'vant';
-Vue.use(Toast).use(Notify);
+
     export default {
         name: 'login',
         data(){
@@ -47,8 +45,8 @@ Vue.use(Toast).use(Notify);
                 }if(!this.sms){
                     return  Notify({ type: 'danger', message: '请输入验证码' , color: 'rgba(255,255,255,1)',duration: 500,
                         background: 'rgba(0,0,0,.5)'});
-                }
-
+              }
+              this.$router.push('/one')
             }
         }
     };
