@@ -6,9 +6,9 @@ import router from './router';
 import axios from 'axios';
 
 // UI
-import Vant from 'vant';
+
 import 'vant/lib/index.css';
-Vue.use(Vant);
+
 
 // common css
 import './assets/css/base.css';
@@ -31,6 +31,5 @@ router.beforeEach((to, from, next) => {
 })
 new Vue({
     router,
-    store,
     render: h => h(App)
 }).$mount('#app');
