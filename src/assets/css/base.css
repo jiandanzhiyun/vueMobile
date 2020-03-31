@@ -186,16 +186,6 @@
     box-sizing: border-box;
 }
 
-/* 限制显示一行 */
-.text-over-1 {
-    -ms-text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0;
-}
-
 html {
     font-family: "microsoft yahei", 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     overflow-x: hidden;
@@ -237,7 +227,9 @@ a cite {
     font-style: normal;
     *cursor: pointer;
 }
-
+*{
+    box-sizing: border-box;
+}
 ul,li {
     list-style: none
 }
@@ -246,7 +238,12 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
+.font14{
+    font-size: .7rem;
+}
+.font12{
+    font-size: .6rem;
+}
 
 .text-left {
     text-align: left;
@@ -255,7 +252,9 @@ table {
 .text-center {
     text-align: center;
 }
-
+.text-justify{
+    text-align: justify;
+}
 .text-right {
     text-align: right;
 }
@@ -313,4 +312,20 @@ table {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
     overflow: hidden;
+}
+/*覆盖navbar样式*/
+.van-nav-bar{
+    background: #04befe;
+}
+.van-icon-arrow-left::before,.van-nav-bar__title{
+    color: #fff;
+}
+.van-tabs__nav{
+    background-color:#04befe;
+}
+.van-tab{
+    color: rgba(255,255,255,.6);
+}
+.van-tab--active{
+    color: rgba(255,255,255,1);
 }

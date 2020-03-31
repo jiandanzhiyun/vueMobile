@@ -1,0 +1,94 @@
+import Vue from 'vue'
+import Vuex from 'vuex'
+
+//挂载Vuex
+Vue.use(Vuex)
+//非大型项目不必使用~
+//创建VueX对象
+const store  = new Vuex.Store({
+    state:{
+        //存放的键值对就是所要管理的状态
+        name:'helloVueX',
+        list:[
+            {
+                name:'休闲女套装休闲女套装休闲女套装休闲女套装休闲女套装休闲女套装休闲女套装休闲女套装',
+                number:'213658',
+                hot:1,
+                img:require('@/assets/img/img.jpg'),
+                price:666.6,
+            },
+            {
+                name:'苹果手机',
+                number:'213658',
+                hot:0,
+                img:require('@/assets/img/img.jpg'),
+                price:666.6,
+            },
+            {
+                name:'卫衣',
+                number:'213658',
+                hot:0,
+                img:require('@/assets/img/img.jpg'),
+                price:666.6,
+            },
+            {
+                name:'2020新款春装',
+                number:'213658',
+                hot:1,
+                img:require('@/assets/img/img.jpg'),
+                price:666.6,
+            },
+            {
+                name:'短袖T恤',
+                number:'213658',
+                hot:1,
+                img:require('@/assets/img/img.jpg'),
+                price:666.6,
+            },
+            {
+                name:'煎饼锅',
+                number:'213658',
+                hot:1,
+                img:require('@/assets/img/img.jpg'),
+                price:666.6,
+            },
+            {
+                name:'手链',
+                number:'213658',
+                hot:1,
+                img:require('@/assets/img/img.jpg'),
+                price:666.6,
+            },
+            {
+                name:'休闲裤',
+                number:'213658',
+                hot:0,
+                img:require('@/assets/img/img.jpg'),
+                price:666.6,
+            },
+            {
+                name:'宠物猫',
+                number:'213658',
+                hot:1,
+                img:require('@/assets/img/img.jpg'),
+                price:666.6,
+            },
+            {
+                name:'水果派',
+                number:'213658',
+                hot:1,
+                img:require('@/assets/img/img.jpg'),
+                price:666.6,
+            },
+            {
+                name:'小白鞋',
+                number:'213658',
+                hot:1,
+                img:require('@/assets/img/img.jpg'),
+                price:666.6,
+            }
+        ]
+    },
+})
+
+export default store

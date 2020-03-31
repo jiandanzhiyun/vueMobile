@@ -11,7 +11,7 @@
                 第三页
             </van-tabbar-item>
             <van-tabbar-item icon='contact'>
-                第四页
+                我的
             </van-tabbar-item>
         </van-tabbar>
     </div>

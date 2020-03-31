@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" v-cloak>
         <transition :name="transitionName">
             <router-view class="router-view"></router-view>
         </transition>
@@ -49,7 +49,7 @@
         -o-transition: all .3s cubic-bezier(.55,0,.1,1);
         transition: all .3s cubic-bezier(.55,0,.1,1);
         height:100%;
-        overflow: hidden;
+        overflow-x: hidden;
     }
     .vux-pop-out-enter-active,
     .vux-pop-out-leave-active,
