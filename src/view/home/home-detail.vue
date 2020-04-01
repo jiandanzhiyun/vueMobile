@@ -1,6 +1,6 @@
 <template>
     <div class="home-detail">
-        <van-nav-bar  left-arrow fixed @click-left="$router.go(-1)" :border="false" z-index='999'>
+        <van-nav-bar  left-arrow fixed @click-left="$router.go(-1)" :border="false" z-index='999' class="bar-nav">
             <template #title>
             <van-search
                     v-model="value"
@@ -24,6 +24,7 @@
                 </div>
             </div>
         </div>
+        <van-sticky :offset-top="55">
         <div class="detail-multiple">
             <div class="multiple-tab flex-container flex-jus-sa flex-align-c">
                 <div class="multiple-width flex-container flex-jus-c flex-align-c" :class="rank==0 ? 'rank-active':''" @click="multiple(0)">综合<van-icon name="arrow-down" v-show="rank==0"/></div>
@@ -31,6 +32,7 @@
                 <div class="multiple-width flex-container flex-jus-c flex-align-c" :class="rank==2 ? 'rank-active':''" @click="multiple(2)">价格<van-icon name="arrow-down" v-show="rank==2"/></div>
             </div>
         </div>
+        </van-sticky>
         <list ref="list"></list>
     </div>
 </template>
@@ -45,7 +47,9 @@
                 list:[],
                 current:0,
                 active:0,
-                rank:0
+                rank:0,
+
+
             }
         },
         components:{
@@ -53,8 +57,11 @@
         },
         mounted(){
             this.list=this.$store.state.list
+
         },
+
         methods:{
+
             nextGo(number){
 
             },
@@ -124,6 +131,7 @@
         padding: 0 .75rem;
         margin-top: -.5rem;
     }
+
     .multiple-tab{
         width: 100%;
         background: #fff;

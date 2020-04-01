@@ -1,11 +1,13 @@
 <template>
         <div class="list">
-            <van-pull-refresh v-model="isLoading" @refresh="onRefresh">
-                <van-list  class="list-ul flex-container flex-wrap-w flex-jus-st"
-                        v-model="loading"
-                        :finished="finished"
-                        finished-text="没有更多了"
-                        @load="onLoad"
+            <van-pull-refresh v-model="isDownLoading" @refresh="onDownRefresh">
+                <van-list class="list-ul flex-container flex-wrap-w flex-jus-st"
+                        v-model="isUpLoading"
+                        :finished="upFinished"
+                        :immediate-check="false"
+                        :offset="offset"
+                        finished-text="我是有底线的"
+                        @load="onLoadList"
                 >
                 <li class="list-li" v-for="item in list">
                     <div class="list-img"><img :src="item.img" alt=""></div>
@@ -17,7 +19,6 @@
             </van-pull-refresh>
         </div>
 </template>
-
 <script>
     export default {
         name: 'list',
@@ -26,18 +27,56 @@
                 list:[],
                 isLoading:false,
                 loading:false,
-                finished:false
+                finished:false,
+                isDownLoading: false, // 下拉刷新
+                isUpLoading: false, // 上拉加载
+                upFinished: false, // 上拉加载完毕
+                offset: 300, // 滚动条与底部距离小于 offset 时触发load事件
+                limit:10,
+                page:0,
+
             }
+        },
+        created(){
+            this.getroadList()
         },
         mounted() {
             this.list=this.$store.state.list
         },methods:{
-            onRefresh(){
+
+            //下拉刷新
+            onDownRefresh() {
+                this.page =0
+                let that=this;
+                setTimeout(function() {
+                    that.upFinished = false // 不写这句会导致你上拉到底过后在下拉刷新将不能触发下拉加载事件
+                    that.list=[]
+                    that.getroadList() // 加载数据
+                },300)
 
             },
-            onLoad(){
+            onLoadList() {
+                // 异步更新数据
+                this.page++;
+                this.getroadList()
 
-            }
+
+            },
+            getroadList(){
+                const _self = this
+                _self.isDownLoading = false
+                //请求接口需要用到的
+                // if(rows==null || rows.length==0){
+                //     // 加载状态结束
+                //     _self.upFinished = true;
+                // }if(rows.length<this.limit){
+                //     _self.upFinished = true
+                // }if(this.page==1){
+                //     _self.list = rows
+                // }else{
+                //     _self.list = _self.list.concat(rows)
+                // }
+            },
         }
     };
 </script>
