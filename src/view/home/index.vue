@@ -35,7 +35,7 @@ import tabbar from '../../components/tabbar'
                     'https://img.yzcdn.cn/vant/apple-1.jpg',
                     'https://img.yzcdn.cn/vant/apple-2.jpg'
                 ],
-                list:[ ]
+                list:[]
             }
         },
         components:{

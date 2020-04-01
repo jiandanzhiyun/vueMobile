@@ -24,7 +24,6 @@
         methods:{
             choice(event){
                 this.active=event
-                console.log(event)
                 this.$refs.tabbar.init(this.active)
             }
         }
