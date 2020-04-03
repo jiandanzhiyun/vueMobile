@@ -22,8 +22,7 @@
                     //设置动画名称
                     this.transitionName = 'vux-pop-in';
                 }if(to.meta.index == from.meta.index){
-
-                    this.transitionName = 'fade';
+                    this.transitionName = 'van-fade';
                 }else if(to.meta.index < from.meta.index){
                     this.transitionName = 'vux-pop-out';
                 }
@@ -77,13 +76,5 @@
     .vux-pop-in-leave-active {
         opacity: 0;
         transform: translate3d(-100%, 0, 0);
-    }
-    .fade-enter-active,
-    .fade-leave-active {
-        transition: opacity 0.2s;
-    }
-    .fade-enter,
-    .fade-leave-to {
-        opacity: 0;
     }
 </style>
