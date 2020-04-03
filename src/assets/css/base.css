@@ -181,6 +181,14 @@
     -webkit-box-flex: 9;
     flex: 9;
 }
+.flex-column{
+    　display:flex;
+    　　flex-direction:column;
+    　　-webkit-flex-direction:column;
+    　　-moz-flex-direction:column;
+    　　-o-flex-direction:column;
+}
+
 
 * {
     box-sizing: border-box;
@@ -286,26 +294,52 @@ table {
 .dis-inblock {
     display: inline-block;
 }
+/*vant自带文字省略*/
+/*
+<div class="van-ellipsis">这是一段最多显示一行的文字，多余的内容会被省略</div>
+<div class="van-multi-ellipsis--l2">这是一段最多显示两行的文字，多余的内容会被省略</div>
+<div class="van-multi-ellipsis--l3">这是一段最多显示三行的文字，多余的内容会被省略</div>
+*/
+/*为元素添加 Retina 屏幕下的 1px 边框（即 hairline），基于伪类 transform 实现。*/
+/*
+<!-- 上边框 -->
+<div class="van-hairline--top"></div>
 
-.ellipsis {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
+<!-- 下边框 -->
+<div class="van-hairline--bottom"></div>
 
-.ellipsis-line-2 {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-}
+<!-- 左边框 -->
+<div class="van-hairline--left"></div>
 
-.ellipsis-line-3 {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
-}
+<!-- 右边框 -->
+<div class="van-hairline--right"></div>
+
+<!-- 上下边框 -->
+<div class="van-hairline--top-bottom"></div>
+
+<!-- 全边框 -->
+<div class="van-hairline--surround"></div>
+*/
+
+/*.ellipsis {*/
+/*    overflow: hidden;*/
+/*    white-space: nowrap;*/
+/*    text-overflow: ellipsis;*/
+/*}*/
+
+/*.ellipsis-line-2 {*/
+/*    display: -webkit-box;*/
+/*    -webkit-box-orient: vertical;*/
+/*    -webkit-line-clamp: 2;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.ellipsis-line-3 {*/
+/*    display: -webkit-box;*/
+/*    -webkit-box-orient: vertical;*/
+/*    -webkit-line-clamp: 3;*/
+/*    overflow: hidden;*/
+/*}*/
 
 .ellipsis-line-5 {
     display: -webkit-box;

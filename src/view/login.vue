@@ -12,7 +12,6 @@
     </div>
 </template>
 <script>
-
     export default {
         name: 'login',
         data(){
@@ -34,6 +33,7 @@
                        this.canClick = false; //这里重新开启
                    }
                }, 1000);
+
            },
             login(){
               if(!this.tel){
@@ -75,6 +75,7 @@
     color: #fff;
     text-indent: 2rem;
     margin-bottom: 1rem;
+    font-size: .7rem;
 }
 .input-class input{
   border: 0;

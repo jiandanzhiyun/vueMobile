@@ -19,7 +19,7 @@
         </div>
         <div class="detail-box">
             <div class="detail-background flex-container flex-wrap-w flex-jus-st">
-                <div class="detail-width ellipsis" v-for="(item,index) in list" :class="active==index ? 'detail-active':''" @click="getChoice(index)">
+                <div class="detail-width van-ellipsis" v-for="(item,index) in list" :class="active==index ? 'detail-active':''" @click="getChoice(index)">
                         {{item.name}}
                 </div>
             </div>

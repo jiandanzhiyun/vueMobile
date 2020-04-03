@@ -8,7 +8,6 @@ Vue.use(Vuex)
 const store  = new Vuex.Store({
     state:{
         //存放的键值对就是所要管理的状态
-        name:'helloVueX',
         list:[
             {
                 name:'休闲女套装休闲女套装休闲女套装休闲女套装休闲女套装休闲女套装休闲女套装休闲女套装',
@@ -16,6 +15,7 @@ const store  = new Vuex.Store({
                 hot:1,
                 img:require('@/assets/img/img.jpg'),
                 price:666.6,
+                type:'休闲女套装休闲女套装休闲女套装休闲女套装休闲女套装休闲女套装休闲女套装休闲女套装'
             },
             {
                 name:'苹果手机',
@@ -23,6 +23,7 @@ const store  = new Vuex.Store({
                 hot:0,
                 img:require('@/assets/img/img.jpg'),
                 price:666.6,
+                type:'32'
             },
             {
                 name:'卫衣',
@@ -30,6 +31,7 @@ const store  = new Vuex.Store({
                 hot:0,
                 img:require('@/assets/img/img.jpg'),
                 price:666.6,
+                type:'32'
             },
             {
                 name:'2020新款春装',
@@ -37,6 +39,7 @@ const store  = new Vuex.Store({
                 hot:1,
                 img:require('@/assets/img/img.jpg'),
                 price:666.6,
+                type:''
             },
             {
                 name:'短袖T恤',
@@ -44,6 +47,7 @@ const store  = new Vuex.Store({
                 hot:1,
                 img:require('@/assets/img/img.jpg'),
                 price:666.6,
+                type:''
             },
             {
                 name:'煎饼锅',
@@ -51,6 +55,7 @@ const store  = new Vuex.Store({
                 hot:1,
                 img:require('@/assets/img/img.jpg'),
                 price:666.6,
+                type:''
             },
             {
                 name:'手链',
@@ -58,6 +63,7 @@ const store  = new Vuex.Store({
                 hot:1,
                 img:require('@/assets/img/img.jpg'),
                 price:666.6,
+                type:''
             },
             {
                 name:'休闲裤',
@@ -65,6 +71,7 @@ const store  = new Vuex.Store({
                 hot:0,
                 img:require('@/assets/img/img.jpg'),
                 price:666.6,
+                type:''
             },
             {
                 name:'宠物猫',
@@ -72,6 +79,7 @@ const store  = new Vuex.Store({
                 hot:1,
                 img:require('@/assets/img/img.jpg'),
                 price:666.6,
+                type:''
             },
             {
                 name:'水果派',
@@ -79,6 +87,7 @@ const store  = new Vuex.Store({
                 hot:1,
                 img:require('@/assets/img/img.jpg'),
                 price:666.6,
+                type:''
             },
             {
                 name:'小白鞋',
@@ -86,6 +95,7 @@ const store  = new Vuex.Store({
                 hot:1,
                 img:require('@/assets/img/img.jpg'),
                 price:666.6,
+                type:''
             }
         ]
     },

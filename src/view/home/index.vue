@@ -1,5 +1,6 @@
 <template>
 <div class="home">
+
     <van-search disabled
             shape="round"
             background="#04befe"
@@ -19,6 +20,28 @@
         </van-swipe-item>
     </van-swipe>
 
+    <van-swipe class="my-swipe"  indicator-color="white">
+        <van-swipe-item>
+            <van-grid :gutter="5" :column-num="5" square>
+                <van-grid-item
+                        v-for="value in textValue"
+                        :key="value.name"
+                        :icon="value.url"
+                        :text="value.name"
+                />
+            </van-grid>
+        </van-swipe-item>
+        <van-swipe-item>
+            <van-grid :gutter="5" :column-num="5" square>
+                <van-grid-item
+                        v-for="value in textValue"
+                        :key="value.name"
+                        :icon="value.url"
+                        :text="value.name"
+                />
+            </van-grid>
+        </van-swipe-item>
+    </van-swipe>
  <tabbar @tab="choice"  ref="tabbar"></tabbar>
 </div>
 </template>
@@ -35,7 +58,49 @@ import tabbar from '../../components/tabbar'
                     'https://img.yzcdn.cn/vant/apple-1.jpg',
                     'https://img.yzcdn.cn/vant/apple-2.jpg'
                 ],
-                list:[]
+                list:[],
+                textValue:[
+                    {
+                        name:'京东国际',
+                        url:require('../../assets/img/img.jpg')
+                    },
+                    {
+                        name:'京东拍卖',
+                        url:require('../../assets/img/img.jpg')
+                    },
+                    {
+                        name:'唯品会',
+                        url:require('../../assets/img/img.jpg')
+                    },
+                    {
+                        name:'沃尔玛',
+                        url:require('../../assets/img/img.jpg')
+                    },
+                    {
+                        name:'京东旅行',
+                        url:require('../../assets/img/img.jpg')
+                    },
+                    {
+                        name:'看病够药',
+                        url:require('../../assets/img/img.jpg')
+                    },
+                    {
+                        name:'拍拍二手',
+                        url:require('../../assets/img/img.jpg')
+                    },
+                    {
+                        name:'领现金',
+                        url:require('../../assets/img/img.jpg')
+                    },
+                    {
+                        name:'种豆得豆',
+                        url:require('../../assets/img/img.jpg')
+                    },
+                    {
+                        name:'更多频道',
+                        url:require('../../assets/img/img.jpg')
+                    }
+                ]
             }
         },
         components:{

@@ -18,7 +18,7 @@
             <span class="flex-container flex-jus-c flex-align-c">换一换<van-icon name="replay" /></span>
         </div>
         <div class="find-msg flex-container flex-wrap-w flex-jus-st">
-            <div class="find-dl ellipsis" v-for="(item,index) in list" v-if="index < 5">{{item.name}}</div>
+            <div class="find-dl van-ellipsis" v-for="(item,index) in list" v-if="index < 5">{{item.name}}</div>
         </div>
     </div>
     <div class="search-find">
@@ -29,7 +29,7 @@
         <div class="find-msg find-list flex-container flex-wrap-w flex-jus-st flex-align-s text-left">
             <li v-for="(item,index) in list" class="flex-container  flex-jus-st flex-align-c">
                 <b class="find-number">{{index+1}}</b>
-                 <span class="ellipsis">{{item.name}}</span>
+                 <span class="van-ellipsis">{{item.name}}</span>
             </li>
         </div>
     </div>

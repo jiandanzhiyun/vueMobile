@@ -11,7 +11,7 @@
                 >
                 <li class="list-li" v-for="item in list">
                     <div class="list-img"><img :src="item.img" alt=""></div>
-                    <div class="ellipsis font14 text-left list-name">{{item.name}}</div>
+                    <div class="van-ellipsis font14 text-left list-name">{{item.name}}</div>
                     <div class="font14 text-left list-price">￥{{item.price}}</div>
                     <div class="font12 text-left list-sales">{{item.number/10000}}万笔</div>
                 </li>
@@ -87,7 +87,7 @@
     width: 100%;
 }
 .list-ul{
-  width: 100%;
+  width: 100%;      /* 将 div 元素中的文本分为2列，并规定列间1rem像素的间隔。 */
 }
 .list-ul .list-li{
     width: calc((100% - .5rem) / 2);
@@ -123,4 +123,5 @@
         color: #999;
         padding:0 .5rem 0;
     }
+
 </style>

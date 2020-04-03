@@ -14,7 +14,7 @@
         >
         <ul class="hot-list">
             <li v-for="(item,index) in list" class="flex-container flex-jus-sp flex-align-c">
-                <div class="ellipsis">
+                <div class="van-ellipsis">
                     <b>{{index+1}}</b>
                     <span>{{item.name}}</span>
                     <b class="hot-bg" v-if="item.hot==0">热</b>
