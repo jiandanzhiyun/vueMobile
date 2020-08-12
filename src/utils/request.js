@@ -1,14 +1,18 @@
 import axios from 'axios';
 
-const ajax = axios.create({
+const service = axios.create({
     // process.env.NODE_ENV === 'development', //来判断是否开发环境
-     headers:{},
+     headers:{'Content-Type':'application/json;charset=utf-8' },
      baseURL: '',
     timeout: 5000
 });
 
-ajax.interceptors.request.use(
-    config => {
+service.interceptors.request.use(
+      config => {
+        if(localStorage.getItem('token')){
+            config.headers.common['XX-Token']=localStorage.getItem('token')
+
+        }
         return config;
     },
     error => {
@@ -17,7 +21,7 @@ ajax.interceptors.request.use(
     }
 );
 
-ajax.interceptors.response.use(
+service.interceptors.response.use(
     response => {
         if (response.status === 200) {
             return response.data;
@@ -31,4 +35,4 @@ ajax.interceptors.response.use(
     }
 );
 
-export default ajax;
+export default service;
